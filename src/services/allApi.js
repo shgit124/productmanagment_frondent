@@ -1,6 +1,6 @@
 import commonApi from "./commonApi"
 
-const BASE_URL = "http://localhost:3000"
+const BASE_URL = "./baseUrl"
 
 // Add Product
 export const addProductApi = async (data) => {
