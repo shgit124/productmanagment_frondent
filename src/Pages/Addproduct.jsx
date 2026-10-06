@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../services/baseurl";
 
 
 function Addproduct() {
@@ -23,9 +24,9 @@ function Addproduct() {
         formData.append('description', collectdata.description)
        formData.append('uploadimg', collectdata.image)
         try {
-            const response = await fetch('http://localhost:3000/add-product', {
-                method: 'POST',
-                body: formData
+              const response = await fetch(`${BASE_URL}/add-product`, {
+            method: 'POST',
+            body: formData
             })
             const result = await response.json()
             console.log(result)

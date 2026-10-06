@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getProductsApi } from "../services/allApi";
 import { deleteProductApi } from '../services/allApi';
 import { useNavigate } from "react-router-dom";
-
+import BASE_URL from "../services/baseurl";
 function Listproduct() {
 
       const [products, setProducts] = useState([]);
@@ -83,15 +83,15 @@ const handleEdit = (item) => {
 
                         <div className="card h-100 shadow-sm">
 
-                            <img
-                                src={`http://localhost:3000/bookimages/${item.uploadimg}`}
-                                className="card-img-top"
-                                alt={item.title}
-                                style={{
-                                    height: "250px",
-                                    objectFit: "cover"
-                                }}
-                            />
+                         <img
+    src={`${BASE_URL}/bookImages/${item.uploadimg}`}
+    className="card-img-top"
+    alt={item.title}
+    style={{
+        height: "250px",
+        objectFit: "cover"
+    }}
+/>
 
                             <div className="card-body">
 
