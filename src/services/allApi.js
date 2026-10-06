@@ -1,6 +1,5 @@
 import commonApi from "./commonApi"
-import BASE_URL from "./baseUrl"
-
+import BASE_URL from "./baseurl"
 
 // Add Product
 export const addProductApi = async (data) => {
